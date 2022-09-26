@@ -10,6 +10,7 @@
 
 <body>
     @include('includes.header')
+    @include('includes.errors')
     <div class="text-center">FEEDBACK TEMP</div>
     @include('includes.footer')
 </body>

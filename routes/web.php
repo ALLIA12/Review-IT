@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\ReviewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', [Controller::class,'index'])->name('home');
 
 Route::get('/schedule', function () {
     return view('schedule');
@@ -45,6 +45,7 @@ Route::get('/blog', function () {
     return view('blog');
 })->name('blog');
 
-Route::get('/reviews', function () {
-    return view('reviews');
-})->name('reviews');
+Route::get('/reviews',[ReviewsController::class, 'index'])->name('reviews');
+
+Route::get('/reviews/create', [ReviewsController::class, 'create'])->name('reviews.create');
+Route::post('/reviews/create', [ReviewsController::class, 'store'])->name('reviews.store');

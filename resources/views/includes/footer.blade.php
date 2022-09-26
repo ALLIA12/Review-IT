@@ -57,7 +57,7 @@
                     <p class="font-medium">
                         Company
                     </p>
-                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500 ">
                         <a class="hover:opacity-75" href> About </a>
                         <a class="hover:opacity-75" href> Meet the Team </a>
                         <a class="hover:opacity-75" href> History </a>
