@@ -44,6 +44,11 @@ return [
             'throw' => false,
         ],
 
+        'reviewImages' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/reviewImages',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

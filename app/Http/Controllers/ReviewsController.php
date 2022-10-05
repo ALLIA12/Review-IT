@@ -36,8 +36,22 @@ class ReviewsController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
-        //
+        //dd($request);
+        $formFields = $request->validate([
+            'title'   => 'required|string',
+            'author'   => 'string|required',
+            'rating' => 'numeric|required',
+            'email' => 'required|email',
+            'summary' => 'sometimes',
+        ]);
+        $request->validate(['imagePath' => 'required|file|max:5120|mimes:png,jpg,jpeg']);
+        if ($request->hasFile('imagePath')) {
+            $file = request()->file('imagePath');
+            $formFields['imagePath'] = '/reviewImages/' . $file->store('', ['disk' => 'reviewImages']);
+        }
+        $formFields['active'] = 0;
+        $review = reviews::create($formFields);
+        return back()->with('info', 'Review has been added successfully, please await for it to be activated.');
     }
 
     /**

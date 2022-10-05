@@ -13,7 +13,28 @@
 <body>
     @include('includes.header')
 
-    <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">Submit a review:
+    @if (session('info'))
+        <br>
+        <div class="flex justify-center">
+            <div class="row">
+                <div class="items-center justify-center bg-white w-[50rem]">
+                    <div class="flex bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700" role="alert">
+                        <svg class="w-5 h-5 inline mr-3" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <div>
+                            <span class="font-medium">Created!</span> {{ session('info') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+    <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">Submit a
+        review:
     </p>
     <br>
     <form role="form" method="POST" action="{{ route('reviews.store') }}" enctype="multipart/form-data"
@@ -39,6 +60,15 @@
                                     Please write your name:
                                 </label>
                                 <input type="text" name="author" id="author" placeholder="Author"
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                            </div>
+                        </div>
+                        <div class="px-3">
+                            <div class="mb-5">
+                                <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+                                    Please write your Email:
+                                </label>
+                                <input type="text" name="email" id="email" placeholder="ALLIA1999@HOTMAIL.COM"
                                     class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                             </div>
                         </div>
@@ -68,9 +98,12 @@
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                                 </svg>
-                                <h2 class="mt-4 text-xl font-medium text-gray-700 tracking-wide">Upload Image</h2>
+                                <h2 class="mt-4 text-xl font-medium text-gray-700 tracking-wide">Upload Image
+                                </h2>
 
-                                <p class="mt-2 text-gray-500 tracking-wide">Upload or darg & drop your file JPEG, PNG,
+                                <p class="mt-2 text-gray-500 tracking-wide">Upload or darg & drop your file
+                                    JPEG,
+                                    PNG,
                                     JPG </p>
 
                                 <input name="imagePath" id="imagePath" type="file" class="hidden"

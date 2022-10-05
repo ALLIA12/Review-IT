@@ -20,5 +20,6 @@ class Reviews extends Model
         'rating',
         'imagePath',
         'email',
+        'active'
     ];
 }
