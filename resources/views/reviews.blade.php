@@ -10,15 +10,11 @@
 
 <body>
     @include('includes.header')
-    <div class="text-center">REVIEWS TEMP {{ count($reviews) }}</div>
-    <div class="text-center">
-        <a href="{{ route('reviews.create') }}">
-            <button class="bg-sky-200 hover:bg-sky-400 text-white font-bold py-2 px-4 rounded-full">
-                Submit A Review
-            </button>
-        </a>
-    </div>
+    <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">
+        All Of Our Reviews
+    </p>
     <br>
+
     @foreach ($reviews as $review)
         <div>
             <div class="object-center content-center text-center" dir="auto">
@@ -65,6 +61,14 @@
         </div>
         <br>
     @endforeach
+    <div class="text-center">
+        <a href="{{ route('reviews.create') }}">
+            <button class="bg-sky-200 hover:bg-sky-400 text-white font-bold py-2 px-4 rounded-full">
+                Submit A Review
+            </button>
+        </a>
+    </div>
+    <br>
     @include('includes.footer')
 </body>
 

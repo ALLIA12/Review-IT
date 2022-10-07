@@ -1,17 +1,9 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-</head>
-
-<body>
-    @if ($errors->any())
+    @if (session('info'))
+        <br>
         <div class="flex justify-center">
             <div class="row">
                 <div class="items-center justify-center bg-white w-[50rem]">
-                    <div class="flex bg-red-100 rounded-lg p-4 mb-4 text-sm text-red-700" role="alert">
+                    <div class="flex bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700" role="alert">
                         <svg class="w-5 h-5 inline mr-3" fill="currentColor" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -19,13 +11,10 @@
                                 clip-rule="evenodd"></path>
                         </svg>
                         <div>
-                            @foreach ($errors->all() as $error)
-                                <div>{{ $error }}</div>
-                            @endforeach
+                            <span class="font-medium">Created!</span> {{ session('info') }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     @endif
-</body>

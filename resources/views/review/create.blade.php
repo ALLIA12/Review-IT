@@ -12,27 +12,10 @@
 
 <body>
     @include('includes.header')
+    @include('includes.info')
+    @include('includes.errors')
 
-    @if (session('info'))
-        <br>
-        <div class="flex justify-center">
-            <div class="row">
-                <div class="items-center justify-center bg-white w-[50rem]">
-                    <div class="flex bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700" role="alert">
-                        <svg class="w-5 h-5 inline mr-3" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <div>
-                            <span class="font-medium">Created!</span> {{ session('info') }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endif
+
     <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">Submit a
         review:
     </p>
@@ -47,49 +30,53 @@
                         <div class="px-3">
                             <div>
                                 <label for="title" class="mb-3 block font-medium text-[#07074D]">
-                                    Please write the title of the show:
+                                    Please write the title of the show:<span class="text-red-500">*</span>
                                 </label>
                                 <input type="text" name="title" id="title" placeholder="Title"
-                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                    value="{{ old('title') }}" />
                             </div>
                         </div>
                         <br>
                         <div class="px-3">
                             <div class="mb-5">
                                 <label for="author" class="mb-3 block text-base font-medium text-[#07074D]">
-                                    Please write your name:
+                                    Please write your name: <span class="text-red-500">*</span>
                                 </label>
                                 <input type="text" name="author" id="author" placeholder="Author"
-                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                    value="{{ old('author') }}" />
                             </div>
                         </div>
                         <div class="px-3">
                             <div class="mb-5">
                                 <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
-                                    Please write your Email:
+                                    Please write your Email:<span class="text-red-500">*</span>
                                 </label>
                                 <input type="text" name="email" id="email" placeholder="ALLIA1999@HOTMAIL.COM"
-                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                    class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                    value="{{ old('email') }}" />
                             </div>
                         </div>
                         <div class="w-full px-3 ">
                             <label for="rating" class="mb-3 block text-base font-medium text-[#07074D]">
-                                What is your rating out of 5 ?
+                                What is your rating out of 5 ?<span class="text-red-500">*</span>
                             </label>
                             <input type="number" name="rating" id="rating" placeholder="5" min="0"
                                 max="5"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                                value="{{ old('rating') }}" />
                         </div>
                         <div class="w-full px-3 py-3">
                             <label for="summary" class="mb-3 block text-base font-medium text-[#07074D]">Your
-                                review</label>
+                                review<span class="text-red-500">*</span></label>
                             <textarea name="summary" id="summary" rows="4"
                                 class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                placeholder="Your review..."></textarea>
+                                placeholder="Your review...">{{ old('summary') }}</textarea>
                         </div>
                         <div class="w-full px-3">
                             <label for="imagePath" class="mb-3 block text-base font-medium">
-                                Upload Image:
+                                Upload Image:<span class="text-red-500">*</span>
                             </label>
                             <label for="imagePath"
                                 class="mx-auto cursor-pointer flex max-w-lg flex-col items-center rounded-xl border-2 border-dashed border-blue-400 bg-white p-6 text-center">

@@ -14,7 +14,7 @@ class ReviewsController extends Controller
      */
     public function index()
     {
-        $reviews = Reviews::where('active', '=', 1)->get();
+        $reviews = Reviews::get();
         return view('reviews', compact('reviews'));
     }
 
