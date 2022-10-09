@@ -21,7 +21,7 @@ class Feedback extends Model
         'subject',
         'satisfaction',
         'gender',
-        'location',
         'comment',
+        'allow',
     ];
 }

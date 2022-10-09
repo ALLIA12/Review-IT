@@ -60,9 +60,9 @@ class ReviewsController extends Controller
      * @param  \App\Models\reviews  $reviews
      * @return \Illuminate\Http\Response
      */
-    public function show(reviews $reviews)
+    public function show(reviews $review)
     {
-        //
+        return view('review.show', compact('review'));
     }
 
     /**

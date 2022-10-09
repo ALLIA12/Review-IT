@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FEEDBACK</title>
+    <title>Document</title>
 </head>
 
 <body>
     @include('includes.header')
-    @include('includes.errors')
-    <div class="text-center">FEEDBACK TEMP</div>
-    @include('includes.footer')
 </body>
 
 </html>

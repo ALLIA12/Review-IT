@@ -21,10 +21,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->string('subject');
-            $table->string('location');
             $table->longText('comment');
             $table->tinyInteger('satisfaction');
             $table->tinyInteger('gender');
+            $table->tinyInteger('allow');
         });
     }
 

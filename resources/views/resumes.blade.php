@@ -10,7 +10,26 @@
 
 <body>
     @include('includes.header')
-    <div class="text-center">RESUMES TEMP</div>
+    <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">
+        OUR GIGACHADS
+    </p>
+    <div class="grid place-items-center">
+        <iframe height="1100" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
+        <br>
+        <iframe height="1100" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
+        <br>
+
+        <iframe height="1100" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
+        <br>
+
+        <iframe height="1100" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
+        <br>
+
+        <iframe height="1100" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
+        <br>
+        <iframe height="1000" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
+        <br>
+    </div>
     @include('includes.footer')
 </body>
 

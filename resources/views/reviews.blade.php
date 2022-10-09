@@ -21,7 +21,7 @@
                 <div class="w-full text-slate-700 flex flex-col items-center">
                     <div class="text-left flex flex-col w-full items-center justify-center">
                         <div class="w-full h">
-                            <a href="" rel="noreferrer" target="_blank"
+                            <a href="{{ route('reviews.show', $review->id) }}" rel="noreferrer" target="_blank"
                                 class="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100 rounded-xl w-full flex flex-col md:flex-row justify-start shadow-md transition-all duration-100 ">
                                 <!-- <div class="flex-grow"> -->
                                 <div class="flex-grow w-1/3 shadow bg-cover rounded-t-xl md:rounded-none md:rounded-l-xl"

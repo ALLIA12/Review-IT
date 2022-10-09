@@ -14,7 +14,8 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        //
+        $feedbacks = Feedback::where('allow', '=', 1)->get();
+        return view('feedbacks', compact('feedbacks'));
     }
 
     /**
@@ -24,7 +25,7 @@ class FeedbackController extends Controller
      */
     public function create()
     {
-        //
+        return view('feedback.create');
     }
 
     /**
@@ -35,7 +36,23 @@ class FeedbackController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formFields = $request->validate([
+            'email'   => 'required|string|email|unique:feedback',
+            'fName'   => 'string|required',
+            'lName' => 'string|required',
+            'phone' => 'required|string',
+            'gender' => 'required|numeric',
+            'subject' => 'required|string',
+            'comment' => 'required|string',
+            'satisfaction' => 'required|numeric',
+        ]);
+        if ($request['allow'] != null) {
+            $formFields['allow'] = 1;
+        } else {
+            $formFields['allow'] = 0;
+        }
+        $review = feedback::create($formFields);
+        return back()->with('info', 'Feedback has been added successfully, thanks.');
     }
 
     /**

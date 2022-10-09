@@ -69,7 +69,7 @@
                             class="text-gray-500 hover:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5  dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Feedback</a>
                     </li>
                     <li>
-                        <a href="{{ route('resumes') }}"
+                        <a href="{{ route('resume') }}"
                             class="text-gray-500 hover:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5  dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Resumes</a>
                     </li>
                     <li>
@@ -83,7 +83,6 @@
                             class="text-gray-500 hover:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5  dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Blog</a>
                     </li>
 
-
                     <li>
                         <a href="{{ route('reviews') }}"
                             class="text-gray-500 hover:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5  dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Reviews
@@ -94,4 +93,6 @@
         </div>
     </nav>
 </header>
+<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
+
 </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\ReviewsController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,13 +30,9 @@ Route::get('/video', function () {
     return view('video');
 })->name('video');
 
-Route::get('/feedback', function () {
-    return view('feedback');
-})->name('feedback');
-
-Route::get('/resumes', function () {
+Route::get('/resume', function () {
     return view('resumes');
-})->name('resumes');
+})->name('resume');
 
 Route::get('/contact-us', function () {
     return view('ContactUs');
@@ -46,6 +43,10 @@ Route::get('/blog', function () {
 })->name('blog');
 
 Route::get('/reviews',[ReviewsController::class, 'index'])->name('reviews');
-
 Route::get('/reviews/create', [ReviewsController::class, 'create'])->name('reviews.create');
 Route::post('/reviews/create', [ReviewsController::class, 'store'])->name('reviews.store');
+Route::get('/reviews/{review}/', [ReviewsController::class, 'show'])->name('reviews.show');
+
+Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
+Route::get('/feedback/create', [FeedbackController::class, 'create'])->name('feedback.create');
+Route::post('/feedback/create', [FeedbackController::class, 'store'])->name('feedback.store');
