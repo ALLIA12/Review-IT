@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\reviews;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReviewsController extends Controller
 {
@@ -50,6 +51,7 @@ class ReviewsController extends Controller
             $formFields['imagePath'] = '/reviewImages/' . $file->store('', ['disk' => 'reviewImages']);
         }
         $formFields['active'] = 0;
+        $formFields['user_id'] = Auth::user()->id;
         $review = reviews::create($formFields);
         return back()->with('info', 'Review has been added successfully, please await for it to be activated.');
     }

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Reviews extends Model
 {
@@ -20,6 +21,15 @@ class Reviews extends Model
         'rating',
         'imagePath',
         'email',
-        'active'
+        'active',
+        'user_id'
     ];
+
+    /**
+     * Get the post that owns the comment.
+     */
+    public function author()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

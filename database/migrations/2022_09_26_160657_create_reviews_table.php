@@ -23,7 +23,13 @@ return new class extends Migration
             $table->string('imagePath');
             $table->tinyInteger('rating');
             $table->tinyInteger('active');
+            $table->unsignedBigInteger('user_id');
         });
+
+        Schema::table('reviews', function ($table) {
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        });
+
     }
 
     /**

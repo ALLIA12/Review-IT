@@ -1,9 +1,10 @@
 <?php
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\FeedbackController;
-use App\Http\Controllers\ReviewsController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReviewsController;
+use App\Http\Controllers\FeedbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [Controller::class,'index'])->name('home');
+Route::get('/', [Controller::class,'index'])->name('index');
+Route::get('/home', [Controller::class, 'index'])->name('home');
 
 Route::get('/schedule', function () {
     return view('schedule');
@@ -43,10 +45,12 @@ Route::get('/blog', function () {
 })->name('blog');
 
 Route::get('/reviews',[ReviewsController::class, 'index'])->name('reviews');
-Route::get('/reviews/create', [ReviewsController::class, 'create'])->name('reviews.create');
-Route::post('/reviews/create', [ReviewsController::class, 'store'])->name('reviews.store');
+Route::get('/reviews/create', [ReviewsController::class, 'create'])->name('reviews.create')->middleware('auth');;
+Route::post('/reviews/create', [ReviewsController::class, 'store'])->name('reviews.store')->middleware('auth');;
 Route::get('/reviews/{review}/', [ReviewsController::class, 'show'])->name('reviews.show');
 
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback');
 Route::get('/feedback/create', [FeedbackController::class, 'create'])->name('feedback.create');
 Route::post('/feedback/create', [FeedbackController::class, 'store'])->name('feedback.store');
+
+Auth::routes();
