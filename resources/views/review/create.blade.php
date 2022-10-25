@@ -34,7 +34,8 @@
                                 </label>
                                 <input type="text" name="title" id="title" placeholder="Title"
                                     class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    value="{{ old('title') }}" />
+                                    value="{{ old('title') }}"
+                                    required />
                             </div>
                         </div>
                         <br>
@@ -45,7 +46,8 @@
                                 </label>
                                 <input type="text" name="author" id="author" placeholder="Author"
                                     class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    value="{{ old('author') }}" />
+                                    value="{{ old('author') }}"
+                                    required />
                             </div>
                         </div>
                         <div class="px-3">
@@ -55,7 +57,8 @@
                                 </label>
                                 <input type="text" name="email" id="email" placeholder="ALLIA1999@HOTMAIL.COM"
                                     class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    value="{{ old('email') }}" />
+                                    value="{{ old('email') }}"
+                                    required />
                             </div>
                         </div>
                         <div class="w-full px-3 ">
@@ -65,14 +68,15 @@
                             <input type="number" name="rating" id="rating" placeholder="5" min="0"
                                 max="5"
                                 class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                value="{{ old('rating') }}" />
+                                value="{{ old('rating') }}"
+                                required />
                         </div>
                         <div class="w-full px-3 py-3">
                             <label for="summary" class="mb-3 block text-base font-medium text-[#07074D]">Your
                                 review<span class="text-red-500">*</span></label>
                             <textarea name="summary" id="summary" rows="4"
                                 class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                placeholder="Your review...">{{ old('summary') }}</textarea>
+                                placeholder="Your review..." required>{{ old('summary') }}</textarea>
                         </div>
                         <div class="w-full px-3">
                             <label for="imagePath" class="mb-3 block text-base font-medium">
@@ -94,29 +98,10 @@
                                     JPG </p>
 
                                 <input name="imagePath" id="imagePath" type="file" class="hidden"
-                                    accept=".jpg,.jpeg,.png" />
+                                    accept=".jpg,.jpeg,.png"/>
                                 </section>
                         </div>
-                        {{-- <div class="mb-5">
-                            <label class="mb-3 block text-base font-medium text-[#07074D]">
-                                Are you coming to the event?
-                            </label>
-                            <div class="flex items-center space-x-6">
-                                <div class="flex items-center">
-                                    <input type="radio" name="radio1" id="radioButton1" class="h-5 w-5" />
-                                    <label for="radioButton1" class="pl-3 text-base font-medium text-[#07074D]">
-                                        Yes
-                                    </label>
-                                </div>
-                                <div class="flex items-center">
-                                    <input type="radio" name="radio1" id="radioButton2" class="h-5 w-5" />
-                                    <label for="radioButton2" class="pl-3 text-base font-medium text-[#07074D]">
-                                        No
-                                    </label>
-                                </div>
-                            </div>
-                        </div> --}}
-                        <!-- This is an example component -->
+
                         <div class="form-layout-footer my-3 text-center ">
                             <button class="bg-sky-400 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-full">
                                 Submit A Review

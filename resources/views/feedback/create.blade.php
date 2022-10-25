@@ -35,7 +35,7 @@
                                     <input type="text" name="email" id="email"
                                         placeholder="ALLIA1999@HOTMAIL.COM"
                                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                        value="{{ old('email') }}" />
+                                        value="{{ old('email') }}" required />
                                 </div>
                             </div>
 
@@ -46,7 +46,7 @@
                                     </label>
                                     <input type="text" name="fName" id="fName" placeholder="Ali"
                                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                        value="{{ old('fName') }}" />
+                                        value="{{ old('fName') }}" required />
                                 </div>
                             </div>
 
@@ -57,7 +57,7 @@
                                     </label>
                                     <input type="text" name="lName" id="lName" placeholder="Thunder"
                                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                        value="{{ old('lName') }}" />
+                                        value="{{ old('lName') }}" required />
                                 </div>
                             </div>
 
@@ -68,7 +68,7 @@
                                     </label>
                                     <input type="number" name="phone" id="phone" placeholder="0558165744"
                                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                        value="{{ old('phone') }}" />
+                                        value="{{ old('phone') }}" required />
                                 </div>
                             </div>
 
@@ -103,7 +103,7 @@
                                     feedback<span class="text-red-500">*</span></label>
                                 <textarea name="comment" id="comment" rows="4"
                                     class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    placeholder="Your feedback...">{{ old('comment') }}</textarea>
+                                    placeholder="Your feedback..." required>{{ old('comment') }}</textarea>
                             </div>
 
                             <div class="px-3">

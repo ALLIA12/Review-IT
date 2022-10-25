@@ -17,10 +17,10 @@
         <iframe height="1100" width="900" src="{{ asset('resumes/Black CV.pdf') }}" frameborder="0"></iframe>
         <br>
 
-        <iframe height="1100" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
+        <iframe height="1100" width="900" src="{{ asset('resumes/Marwan_CV.pdf') }}" frameborder="0"></iframe>
         <br>
 
-        <iframe height="1100" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
+        <iframe height="1100" width="900" src="{{ asset('resumes/Yousuf CV.pdf') }}" frameborder="0"></iframe>
         <br>
 
         <iframe height="1100" width="900" src="{{ asset('resumes/Ali CV.pdf') }}" frameborder="0"></iframe>
