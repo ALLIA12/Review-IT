@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    @include('includes.header')
-    <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">
-        All Of Our Reviews
-    </p>
+    @include('includes.header', ['mainTitle' => 'Have a look at our', 'subTitle' => 'reviews'])
     <br>
 
     @foreach ($reviews as $review)

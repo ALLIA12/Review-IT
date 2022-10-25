@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    @include('includes.header')
+    @include('includes.header', ['mainTitle' => 'Send us your', 'subTitle' => 'feedback'])
+
     <div class="flex flex-col">
         <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">
             All feedback

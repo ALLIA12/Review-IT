@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    @include('includes.header')
+    @include('includes.header', ['mainTitle' => 'Submit your own review', 'subTitle' => 'for review!'])
     @include('includes.info')
     @include('includes.errors')
 

@@ -9,7 +9,11 @@
 </head>
 
 <body>
-    @include('includes.header')
+    @include('includes.header', [
+        'mainTitle' => 'We are looking',
+        'subTitle' => 'forward to',
+    ])
+
     <div class="text-center">GALLRY TEMP</div>
     @include('includes.footer')
 </body>

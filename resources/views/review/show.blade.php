@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    @include('includes.header')
-    <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">
-        {{ $review->title }}
-    </p>
+    @include('includes.header', ['mainTitle' => 'Read the review for', 'subTitle' =>$review->title ])
     <br>
     <div class="flex justify-center">
         <div class=" w-1/2 h-64 shadow bg-cover  rounded-t-xl rounded-b-xl "

@@ -9,7 +9,11 @@
 </head>
 
 <body>
-    @include('includes.header')
+    @include('includes.header', [
+        'mainTitle' => 'Our upcoming',
+        'subTitle' => 'reviews',
+    ])
+
     <div class="text-center">SCHEDULE TEMP</div>
     @include('includes.footer')
 </body>

@@ -9,10 +9,8 @@
 </head>
 
 <body>
-    @include('includes.header')
-    <p class="text-3xl font-bold text-center capitalize lg:text-4xl underline decoration-sky-200">
-        Welcome to the most scuffed website in existence
-    </p>
+    @include('includes.header',['mainTitle' => "Welcome to the website where you can",'subTitle'=>'Review Everything'])
+
     <br>
     <!-- This is an example component -->
     @if (count($reviews))
@@ -49,7 +47,8 @@
                                 </div>
                                 <p
                                     class="flex text-left text-xs md:text-sm text-blue-700 dark:text-blue-400 font-bold leading-normal items-center">
-                                    <span class="text-slate-700 text-xl md:text-lg xl:text-xl font-bold leading-normal">
+                                    <span
+                                        class="text-slate-700 text-xl md:text-lg xl:text-xl font-bold leading-normal">
                                         Rating {{ $review->rating }}/5 </span>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="#0f172a  " class="w-6 h-6">

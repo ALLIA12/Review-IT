@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    @include('includes.header')
+    @include('includes.header', ['mainTitle' => 'Contact ', 'subTitle' => 'US'])
+
     <div class="text-center">CONTACT US TEMP</div>
     @include('includes.footer')
 </body>

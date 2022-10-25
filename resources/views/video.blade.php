@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    @include('includes.header')
+    @include('includes.header', ['mainTitle' => 'Our ', 'subTitle' => 'Videos'])
     <div class="text-center">VIDEO TEMP</div>
     @include('includes.footer')
 </body>

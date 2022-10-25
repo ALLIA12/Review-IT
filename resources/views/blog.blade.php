@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    @include('includes.header')
+    @include('includes.header', ['mainTitle' => 'BLOG', 'subTitle' => 'COPE'])
     <div class="text-center">BLOG TEMP</div>
     @include('includes.footer')
 </body>

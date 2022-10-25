@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    @include('includes.header')
+    @include('includes.header', ['mainTitle' => 'Send us your', 'subTitle' => 'feedback'])
     @include('includes.info')
     @include('includes.errors')
 
