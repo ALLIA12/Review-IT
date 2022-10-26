@@ -10,7 +10,7 @@
 
 <body>
     <div class="flex flex-col h-screen">
-        <div> @include('includes.header', [
+        <div class="h-10"> @include('includes.header', [
             'mainTitle' => 'Welcome to the website where you can',
             'subTitle' => 'Review Everything',
         ])
@@ -180,7 +180,7 @@
 
             <br>
         </div>
-        <div> @include('includes.footer')
+        <div class="h-10"> @include('includes.footer')
         </div>
     </div>
 

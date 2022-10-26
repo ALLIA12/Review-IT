@@ -10,12 +10,12 @@
 
 <body>
     <div class="flex flex-col h-screen">
-        <div> @include('includes.header', ['mainTitle' => 'BLOG', 'subTitle' => 'COPE'])
+        <div class="h-10"> @include('includes.header', ['mainTitle' => 'BLOG', 'subTitle' => 'COPE'])
         </div>
         <div class="flex-grow">
             <div class="text-center">BLOG TEMP</div>
         </div>
-        <div> @include('includes.footer')
+        <div class="h-10"> @include('includes.footer')
         </div>
     </div>
 </body>

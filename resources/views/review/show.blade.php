@@ -10,7 +10,7 @@
 
 <body>
     <div class="flex flex-col h-screen">
-        <div> @include('includes.header', ['mainTitle' => 'Read the review for', 'subTitle' => $review->title])
+        <div class="h-10"> @include('includes.header', ['mainTitle' => 'Read the review for', 'subTitle' => $review->title])
         </div>
         <div class="flex-grow"><br>
             <div class="flex justify-center">
@@ -29,7 +29,7 @@
 
             <hr class="space s" />
         </div>
-        <div> @include('includes.footer')
+        <div class="h-10"> @include('includes.footer')
         </div>
     </div>
 

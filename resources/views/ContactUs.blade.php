@@ -13,7 +13,7 @@
 
 <body>
     <div class="flex flex-col h-screen">
-        <div> @include('includes.header', ['mainTitle' => 'Contact ', 'subTitle' => 'US'])
+        <div class="h-10"> @include('includes.header', ['mainTitle' => 'Contact ', 'subTitle' => 'US'])
         </div>
         <div class="flex-grow">
             <div class="flex flex-col">
@@ -272,7 +272,7 @@
                 </div>
             </div>
         </div>
-        <div> @include('includes.footer')
+        <div class="h-10"> @include('includes.footer')
         </div>
     </div>
 </body>

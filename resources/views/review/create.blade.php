@@ -12,7 +12,7 @@
 
 <body>
     <div class="flex flex-col h-screen">
-        <div> @include('includes.header', ['mainTitle' => 'Submit your own review', 'subTitle' => 'for review!'])
+        <div class="h-10"> @include('includes.header', ['mainTitle' => 'Submit your own review', 'subTitle' => 'for review!'])
         </div>
         <div class="flex-grow">
             @include('includes.info')
@@ -114,7 +114,7 @@
             </form>
         </div>
     </div>
-    <div> @include('includes.footer')
+    <div class="h-10"> @include('includes.footer')
     </div>
     </div>
 

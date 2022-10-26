@@ -10,7 +10,7 @@
 
 <body>
     <div class="flex flex-col h-screen">
-        <div> @include('includes.header', [
+        <div class="h-10"> @include('includes.header', [
             'mainTitle' => 'We are looking',
             'subTitle' => 'forward to',
         ])</div>
@@ -90,6 +90,12 @@
                                 class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
                                 alt="Vinland saga 2">
                         </div>
+                        <!-- Item 12 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="{{ asset('posters/The last of us.jpg') }}"
+                                class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                alt="The last of us">
+                        </div>
                     </div>
                     <!-- Slider indicators -->
                     <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
@@ -109,12 +115,14 @@
                             data-carousel-slide-to="6"></button>
                         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
                             data-carousel-slide-to="7"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-                            data-carousel-slide-to="8"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                            aria-label="Slide 3" data-carousel-slide-to="8"></button>
                         <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
                             aria-label="Slide 3" data-carousel-slide-to="9"></button>
                         <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
                             aria-label="Slide 3" data-carousel-slide-to="10"></button>
+                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                            aria-label="Slide 3" data-carousel-slide-to="11"></button>
                     </div>
                     <!-- Slider controls -->
                     <button type="button"
@@ -150,7 +158,7 @@
             </div>
             <br>
         </div>
-        <div> @include('includes.footer')</div>
+        <div class="h-10"> @include('includes.footer')</div>
     </div>
 </body>
 
