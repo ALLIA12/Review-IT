@@ -9,24 +9,30 @@
 </head>
 
 <body>
-    @include('includes.header', ['mainTitle' => 'Read the review for', 'subTitle' =>$review->title ])
-    <br>
-    <div class="flex justify-center">
-        <div class=" w-1/2 h-64 shadow bg-cover  rounded-t-xl rounded-b-xl "
-            style='background-image: url("{{ asset($review->imagePath != null ? $review->imagePath : 'images/01.jpeg') }}");'>
+    <div class="flex flex-col h-screen">
+        <div> @include('includes.header', ['mainTitle' => 'Read the review for', 'subTitle' => $review->title])
+        </div>
+        <div class="flex-grow"><br>
+            <div class="flex justify-center">
+                <div class=" w-1/2 h-64 shadow bg-cover  rounded-t-xl rounded-b-xl "
+                    style='background-image: url("{{ asset($review->imagePath != null ? $review->imagePath : 'images/01.jpeg') }}");'>
+                </div>
+            </div>
+
+            <div class="mb-4 text-3xl max-w-2xl mx-auto text-justify text-black-500">
+                Written by: {{ $review->author }}
+            </div>
+
+            <div class="indent-7 max-w-2xl mx-auto my-6 text-justify text-black-500">
+                {{ $review->summary }}
+            </div>
+
+            <hr class="space s" />
+        </div>
+        <div> @include('includes.footer')
         </div>
     </div>
 
-    <div class="mb-4 text-3xl max-w-2xl mx-auto text-justify text-black-500">
-        Written by: {{ $review->author }}
-    </div>
-
-    <div class="indent-7 max-w-2xl mx-auto my-6 text-justify text-black-500">
-        {{ $review->summary }}
-    </div>
-
-    <hr class="space s" />
-    @include('includes.footer')
 </body>
 
 </html>

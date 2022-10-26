@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public static function scrambleEmail($string){
+        $reverseString = strrev($string);
+        return $reverseString;
+    }
 }
