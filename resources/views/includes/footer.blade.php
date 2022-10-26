@@ -13,6 +13,11 @@
                     Created by Abdulrahmadn Hakami.
                     <br>
                     Created by Abdulaziz Bawazir.
+                    <br>
+                    Created by Marwan Al-Jedaani
+                    <br>
+                    Created by Yousef Al-Sayegh
+                    <br>
                 </p>
                 <div class="flex mt-8 space-x-6 text-gray-600">
                     <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
