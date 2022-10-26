@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SCHEDULE</title>
+    <link rel="icon" href="{{ asset('icon.png') }}">
+
 </head>
 
 <body>
@@ -156,6 +158,22 @@
                                         <td class="p-2 whitespace-nowrap">
                                             <div class="flex items-center">
                                                 <div class="w-30 h-30 flex-shrink-0 mr-2 sm:mr-3"><img
+                                                        class="rounded-full" src="{{ asset('reviewers/Rory.jpg') }}"
+                                                        width="100" height="100" alt="Sami Al Gamdi"></div>
+                                                <div class="font-medium text-lg text-gray-800">Rory</div>
+                                            </div>
+                                        </td>
+                                        <td class="p-2 whitespace-nowrap">
+                                            <div class="text-left  text-lg">Fate Grand Order</div>
+                                        </td>
+                                        <td class="p-2 whitespace-nowrap">
+                                            <div class="text-left text-lg font-medium text-green-500">7/8/2023</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2 whitespace-nowrap">
+                                            <div class="flex items-center">
+                                                <div class="w-30 h-30 flex-shrink-0 mr-2 sm:mr-3"><img
                                                         class="rounded-full" src="{{ asset('reviewers/Feras.png') }}"
                                                         width="100" height="100" alt="Feras"></div>
                                                 <div class="font-medium text-lg text-gray-800">Feras Hilabi</div>
@@ -165,16 +183,17 @@
                                             <div class="text-left  text-lg">Attack On Titan</div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
-                                            <div class="text-left text-lg font-medium text-green-500">4/20/2023</div>
+                                            <div class="text-left text-lg font-medium text-green-500">9/20/2023</div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="p-2 whitespace-nowrap">
                                             <div class="flex items-center">
                                                 <div class="w-30 h-30 flex-shrink-0 mr-2 sm:mr-3"><img
-                                                        class="rounded-full" src="{{ asset('reviewers/OsamaH.jpg') }}"
-                                                        width="100" height="100" alt="Osama"></div>
-                                                <div class="font-medium text-lg text-gray-800">Osama Al-Heoidi</div>
+                                                        class="rounded-full"
+                                                        src="{{ asset('reviewers/OsamaH.jpg') }}" width="100"
+                                                        height="100" alt="Osama"></div>
+                                                <div class="font-medium text-lg text-gray-800">Osama Al-Howaidi</div>
                                             </div>
                                         </td>
                                         <td class="p-2 whitespace-nowrap">
