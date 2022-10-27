@@ -39,9 +39,9 @@
                 Instead you can <a href="{{ asset('resumes/Ahmed CV.pdf') }}">CLICK TO DOWNLOAD Ahmed CV.</a></p>
         </object>
         <br>
-        <object height="1100" width="900" data="{{ asset('resumes/Ali CV.pdf') }}" type="application/pdf">
+        <object height="1100" width="900" data="{{ asset('resumes/Aziz CV.pdf') }}" type="application/pdf">
             <p>Your web browser doesn't have a PDF plugin.
-                Instead you can <a href="{{ asset('resumes/Ali CV.pdf') }}">CLICK TO DOWNLOAD ALI CV.</a></p>
+                Instead you can <a href="{{ asset('resumes/Aziz CV.pdf') }}">CLICK TO DOWNLOAD Aziz CV.</a></p>
         </object>
     </div>
     @include('includes.footer')
