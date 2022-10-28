@@ -36,6 +36,12 @@
                         <a class="hover:opacity-75" href="{{ route('reviews') }}"> Reviews </a>
                     </nav>
                 </div>
+                <div>
+                    <br>
+                    {!! $blue !!}
+                    <br>
+                    {!! $orange !!}
+                </div>
             </div>
         </div>
         <p class="mt-8 text-xs text-gray-800">

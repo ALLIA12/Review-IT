@@ -44,7 +44,24 @@
                 Instead you can <a href="{{ asset('resumes/Aziz CV.pdf') }}">CLICK TO DOWNLOAD Aziz CV.</a></p>
         </object>
     </div>
-    @include('includes.footer')
+    @include('includes.footer', [
+        'orange' => '<p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="Valid CSS!" />
+        </a>
+    </p>
+          ',
+        'blue' => '<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+        </a>
+    </p>
+         ',
+    ])
 </body>
 
 </html>

@@ -17,7 +17,7 @@
         <div class="flex-grow">
             <div class="text-center">BLOG TEMP</div>
         </div>
-        <div class="h-10"> @include('includes.footer')
+        <div class="h-10"> @include('includes.footer',['orange'=>'','blue'=>''])
         </div>
     </div>
 </body>
