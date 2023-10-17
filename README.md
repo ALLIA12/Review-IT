@@ -1,66 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+# **Review IT**: Your Go-To Platform for Entertainment Reviews
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+"Review IT" is a dedicated platform for reviewing a wide array of entertainment products including movies, games, TV shows, and anime. Dive into insightful reviews, watch the latest trailers, or even leave your own feedback for a holistic entertainment experience.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### **Website Pages**:
+1. **Home**: Get a glance at the featured reviews and top-rated entertainment products.
+2. **Schedule**: Stay updated with our calendar of upcoming reviews.
+3. **Gallery**: A sneak peek into the entertainment we are eagerly awaiting.
+4. **Video**: Dive into a collection of curated trailers you shouldn't miss.
+5. **Feedback**: We value your feedback. Help us enhance your experience on the platform.
+6. **Contact Us**: Get to know more about the team behind "Review IT" and reach out to us.
+7. **Blog**: Previously powered by WordPress, this section is now archived.
+8. **Reviews**: Passionate about an entertainment product? Submit your own review (Login required).
+9. **Login/Register**: Join our community! Register a new account or log in to get started.
 
-## Learning Laravel
+#### Home Page
+![Home Page](https://github.com/ALLIA12/CPCS403_Project/assets/64721459/e69f5291-3e67-462f-a2c2-c0aa773b4191)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### Reviews Page
+![Reviews](https://github.com/ALLIA12/CPCS403_Project/assets/64721459/5184d167-3202-4d72-9d66-9b300327cc9f)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![Reviews 2](https://github.com/ALLIA12/CPCS403_Project/assets/64721459/1dcfdb64-57b3-4a86-8a50-7766a8f4a8ca)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Specific Review Page
+![Review Page](https://github.com/ALLIA12/CPCS403_Project/assets/64721459/d25b70a9-0b7e-43ec-a7d1-384b54dd6c16)
 
-## Laravel Sponsors
+#### Videos Page
+![Videos](https://github.com/ALLIA12/CPCS403_Project/assets/64721459/f7e86648-25b0-45f3-bf49-e38f07528b36)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+### **Tech Stack**:
+- **Backend**: Laravel
+- **Frontend**: Bootstrap & Tailwind CSS
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### **Installation & Setup**:
 
-## Contributing
+1. Clone the repository to your local machine.
+2. Install the necessary dependencies:
+    ```bash
+    composer install
+    npm install
+    ```
+3. Set up your environment variables in the `.env` file.
+4. Run the database migrations and seeders:
+    ```bash
+    php artisan migrate --seed
+    ```
+5. Start the local development server:
+    ```bash
+    php artisan serve
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Now, you should be able to access the "Review IT" platform on `http://localhost:8000`, or `http://127.0.0.1:8000/`.
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
